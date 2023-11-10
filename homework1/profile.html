@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyHub Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="flex justify-between">
+        <div  class="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg> 
+        </div>
+        <div  class="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+    </nav>
+    <div class="flex items-center justify-center flex-col">
+        <div class="flex flex-col w-4/5 max-w-4xl">
+            <div id="profile-info" class="border h-10 mt-2 rounded-xl p-2 bg-black text-white">
+                Profile Info
+            </div>
+            <div class="flex my-2 h-40">
+                <div class="border rounded-full w-40 h-40 mr-1 text-center overflow-hidden ">
+                    <img src="https://sm.ign.com/ign_nordic/cover/a/avatar-gen/avatar-generations_prsz.jpg" alt="profile picture" class="object-cover w-full h-full ">
+                </div>
+                <div class="border flex-1 rounded-xl p-2 grid grid-cols-2">
+                    <div>
+                        <p class="p-1"><b>Name: </b></p>
+                        <p class="p-1"><b>Last Name: </b></p>
+                        <p class="p-1"><b>Email: </b></p>
+                        <p class="p-1"><b>Phone Number: </b></p>
+                    </div>
+                    <div>
+                        <input type="text" name="name" id="name" class="border p-1" placeholder="Marcos">
+                        <input type="text" name="last-name"  id="last-name" class="border p-1" placeholder="Seco Anderson"/>
+                        <input type="email" name="email" id="email" class="border p-1" placeholder="email@email.com">
+                        <input type="number" name="phone" id="phone" class="border p-1" placeholder="123456789">
+                    </div>
+                </div>
+            </div>
+            <div id="deliver-section" class="h-32 w-full border rounded-xl p-2 flex flex-col">
+                <p><b>Delivery Address:</b></p>
+                <textarea id="delivery-address" class="border flex-1 p-1" placeholder="Bulevardul Expoziției 1B, București 012101"></textarea>
+            </div>
+            <div id="billing-section" class="h-32 w-full border my-2 rounded-xl p-2 flex flex-col">
+                <p><b>Billing Address: </b></p>
+                <textarea id="billing-address" class="border flex-1 p-1" placeholder="Bulevardul Expoziției 1B, București 012101"></textarea>
+            </div>
+            <div>
+                <button  class="bg-black rounded-xl text-white p-2">Save Changes</button>
+            </div>
+            <div id="orders-header-section" class="border h-10 mt-2 rounded-xl p-2">
+                <p><b>Orders:</b></p>
+            </div>
+            <div id="orders-list-section" class="h-32 w-full border my-2 rounded-xl p-2">
+                <ul>
+                    <li>Motorcycle <b>ID: 1</b> Status</li>
+                    <li>Car <b>ID: 2</b> Status</li>
+                    <li>Food <b>ID: 3</b> Status</li>
+                </ul>
+            </div>
+            <div id="prducts-header-section" class="border h-10 mt-2 rounded-xl p-2">
+                <b>Products</b>
+            </div>
+            <div id="produtcts-list-section" class="h-32 w-full border my-2 rounded-xl p-2">
+                <ul>
+                    <li>Oranges - quantity: 2 - Status</li>
+                    <li>Apples - quantity: 2 - Status</li>
+                    <li>Bananas - quantity: 2 - Status</li>
+                </ul>
+            </div>
+
+        </div>
+        
+    </div>
+    
+   
+</body>
+</html>
