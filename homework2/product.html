@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyHub Profile</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css">
+    <script src="api_product.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex justify-between">
+        <div  class="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg> 
+        </div>
+        <div  class="">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+        </div>
+    </nav>
+    <div class="flex items-center justify-center flex-col">
+        <div class="flex flex-col w-4/5 max-w-4xl">
+            <form class="flex flex-col items-end h-screen">
+                <div class="h-1/2 grid grid-cols-2 gap-x-4 w-full">
+                    <div class="flex flex-col w-full items-end border rounded-xl">
+                        <div class="flex-grow w-full text-center overflow-hidden relative">
+                            <button class="border px-2 rounded-xl w-12 absolute top-0 right-0 z-10 m-2 bg-white text-black" id="editButton">Edit</button>
+                            <div class="grid gap-2" id="imageGallery">
+                                <img src="https://i.pinimg.com/originals/17/55/78/1755786772b0ce35039ce2a9c6adab34.png" alt="profile picture" class="object-cover aspect-square" id="imageGallery">
+                                <img src="https://i.pinimg.com/originals/17/55/78/1755786772b0ce35039ce2a9c6adab34.png" alt="profile picture" class="object-cover aspect-square" id="imageGallery">
+                                <img src="https://i.pinimg.com/originals/17/55/78/1755786772b0ce35039ce2a9c6adab34.png" alt="profile picture" class="object-cover aspect-square" id="imageGallery">
+                            </div>
+                            
+                            <input type="file" id="fileInput" accept="image/*" multiple style="display: none;" />
+                        </div>
+                    </div>
+                    <div class="flex flex-col">
+                        <div class="border rounded-xl p-1 text-center mb-2 bg-black text-white">MX5 Miata</div>
+                        <div class="flex-grow flex flex-col items-end border rounded-xl">
+                            <button class="border px-2 rounded-xl m-2 bg-black text-white p-1" id="toggleEdit">Edit</button>
+                            <div class="w-full grid grid-cols-2 overflow-hidden" id="detailsDisplay">
+                                <div>
+                                    <p class="p-1"><b>Model: </b><span id="modelDisplay">Mazda Miata MX-5</span></p>
+                                    <p class="p-1 my-1"><b>Manufacturer: </b><span id="manufacturerDisplay">Mazda</span></p>
+                                    <p class="p-1 mb-1"><b>Body Style: </b><span id="bodyStyleDisplay">Convertible sports car</span></p>
+                                    <p class="p-1"><b>Engine Options: </b><span id="engineOptionsDisplay">1.5 L I4 (petrol) 1.8 L I4 (petrol) 2.0 L I4 (petrol) 2.0 L I4 (diesel)</span></p>
+                                </div>
+                                <div id="editFields" class="hidden">
+                                    <input type="text" name="model" id="modelInput" class="border p-1" placeholder="Mazda Miata MX-5">
+                                    <input type="text" name="manufacturer" id="manufacturerInput" class="border p-1 my-1" placeholder="Mazda">
+                                    <input type="text" name="body-style" id="bodyStyleInput" class="border p-1 mb-1" placeholder="Convertible sports car">
+                                    <textarea id="engineOptionsInput" class="border w-full p-2 flex-1 p-1" placeholder="1.5 L I4 (petrol) 1.8 L I4 (petrol) 2.0 L I4 (petrol) 2.0 L I4 (diesel)"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="w-32 border mt-2 rounded-xl bg-black text-white p-2" id="saveButton">Save Changes</button>
+            </form>
+
+        </div>
+        
+    </div>
+    
+   
+</body>
+</html>
+
