@@ -111,5 +111,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
+//The API is storing the products where the users should go.
 

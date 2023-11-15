@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
     res.send('Homework 3')
 });
 
+/* This is the homework3 API I created the database using the MySQL WorkBench */
+
 // USERS ENDPOINTS
 
 
